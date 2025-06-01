@@ -1,0 +1,32 @@
+[
+    {
+      "reportId": "REP_00001",
+      "generationTime": "2024-03-15T14:30:00Z",
+      "templateId": "TPL_002",
+      "templateName": "所有员工薪资表",
+      "fileFormat": "Excel",
+      "filePath": "/simulated_exports/salary_report_202402.xlsx",
+      "generationStatus": "已生成",
+      "generationParams": "{\"month\": \"2024-02\"}",
+      "generatedBy": "admin001",
+      "generatedByName": "系统管理员",
+      "dataPreview": [
+          {"employeeName": "张三", "netSalary": 8500, "payMonth": "2024-02"},
+          {"employeeName": "李四", "netSalary": 9200, "payMonth": "2024-02"}
+      ]
+    },
+    {
+      "reportId": "REP_00002",
+      "generationTime": "2024-04-01T10:00:00Z",
+      "templateId": "TPL_001",
+      "templateName": "月度凭证汇总表",
+      "fileFormat": "PDF",
+      "filePath": "/simulated_exports/voucher_summary_202403.pdf",
+      "generationStatus": "生成失败",
+      "generationParams": "{\"month\": \"2024-03\"}",
+      "generatedBy": "admin001",
+      "generatedByName": "系统管理员",
+      "failureReason": "数据源连接超时"
+    }
+  ]
+  

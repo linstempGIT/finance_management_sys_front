@@ -1,0 +1,68 @@
+[
+    {
+      "assetId": "ASSET_LAPTOP_001",
+      "assetName": "戴尔 XPS 13 笔记本",
+      "assetType": "电子设备",
+      "originalValue": 8500.00,
+      "salvageRate": 0.05,
+      "purchaseDate": "2024-01-15",
+      "status": "闲置",
+      "depreciationMethod": "直线法",
+      "currentHolderId": null,
+      "currentHolderName": null,
+      "location": "IT部仓库"
+    },
+    {
+      "assetId": "ASSET_PROJECTOR_001",
+      "assetName": "爱普生投影仪 CH-TW740",
+      "assetType": "办公设备",
+      "originalValue": 4200.00,
+      "salvageRate": 0.10,
+      "purchaseDate": "2022-11-20",
+      "status": "闲置",
+      "depreciationMethod": "直线法",
+      "currentHolderId": null,
+      "currentHolderName": null,
+      "location": "会议室A储物柜"
+    },
+    {
+      "assetId": "ASSET_CAMERA_001",
+      "assetName": "索尼 Alpha 7 III 相机",
+      "assetType": "电子设备",
+      "originalValue": 13000.00,
+      "salvageRate": 0.08,
+      "purchaseDate": "2024-05-10",
+      "status": "使用中",
+      "depreciationMethod": "直线法",
+      "currentHolderId": "user002",
+      "currentHolderName": "李四",
+      "location": "市场部"
+    },
+    {
+      "assetId": "ASSET_CAR_001",
+      "assetName": "大众帕萨特",
+      "assetType": "交通工具",
+      "originalValue": 180000.00,
+      "salvageRate": 0.15,
+      "purchaseDate": "2021-08-01",
+      "status": "闲置",
+      "depreciationMethod": "直线法",
+      "currentHolderId": null,
+      "currentHolderName": null,
+      "location": "公司车库1号位"
+    },
+    {
+      "assetId": "ASSET_SERVER_001",
+      "assetName": "HPE ProLiant DL380 Gen10",
+      "assetType": "服务器",
+      "originalValue": 35000.00,
+      "salvageRate": 0.03,
+      "purchaseDate": "2024-02-20",
+      "status": "维修中",
+      "depreciationMethod": "直线法",
+      "currentHolderId": null,
+      "currentHolderName": null,
+      "location": "数据中心"
+    }
+  ]
+  

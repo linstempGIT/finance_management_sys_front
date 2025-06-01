@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "password123",
+    "name": "Administrator",
+    "role": "ADMIN",
+    "avatar": "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
+    "token": "fake-admin-auth-token-12345",
+    "phone": "13800138001",
+    "email": "admin@example.com"
+  },
+  {
+    "id": 2,
+    "username": "user",
+    "password": "password123",
+    "name": "Regular User",
+    "role": "USER",
+    "avatar": "https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png",
+    "token": "fake-user-auth-token-67890",
+    "phone": "13800138002",
+    "email": "user@example.com",
+    "departmentName": "销售部",
+    "level": "员工"
+  },
+  {
+    "id": 3,
+    "username": "finance",
+    "password": "password123",
+    "name": "Finance Team",
+    "role": "FINANCIAL",
+    "avatar": "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
+    "token": "fake-financial-auth-token-abcde",
+    "phone": "13800138003",
+    "email": "finance@example.com",
+    "departmentName": "财务部",
+    "level": "主管"
+  },
+  {
+    "id": 4,
+    "username": "test",
+    "password": "test",
+    "name": "Test Account",
+    "role": "USER",
+    "avatar": "",
+    "token": "fake-test-user-token-zyxw",
+    "phone": "13800138004",
+    "email": "test@example.com",
+    "departmentName": "运维部",
+    "level": "员工"
+  },
+  {
+    "id": 10,
+    "username": "finance_staff",
+    "password": "password123",
+    "name": "财务员工王五",
+    "role": "FINANCIAL",
+    "avatar": "",
+    "token": "fake-fin-staff-token",
+    "phone": "13800138004",
+    "email": "finance.staff@example.com",
+    "departmentName": "财务部",
+    "level": "员工"
+  }
+]

@@ -1,0 +1,99 @@
+[
+    {
+      "id": "V001",
+      "voucherNo": "记-001",
+      "voucherDate": "2024-10-01",
+      "description": "购买办公用品",
+      "preparedBy": "系统管理员",
+      "status": "已审核",
+      "entries": [
+        {
+          "id": "E001-1",
+          "summary": "购买A4打印纸",
+          "accountCode": "1601",
+          "debitAmount": 150.00,
+          "creditAmount": null
+        },
+        {
+          "id": "E001-2",
+          "summary": "支付货款",
+          "accountCode": "1002",
+          "debitAmount": null,
+          "creditAmount": 150.00
+        }
+      ]
+    },
+    {
+      "id": "V002",
+      "voucherNo": "记-002",
+      "voucherDate": "2024-10-15",
+      "description": "收到服务费收入",
+      "preparedBy": "李财务",
+      "status": "已过账",
+      "entries": [
+        {
+          "id": "E002-1",
+          "summary": "银行收款",
+          "accountCode": "1002",
+          "debitAmount": 5000.00,
+          "creditAmount": null
+        },
+        {
+          "id": "E002-2",
+          "summary": "确认服务收入",
+          "accountCode": "6001",
+          "debitAmount": null,
+          "creditAmount": 5000.00
+        }
+      ]
+    },
+    {
+      "id": "V003",
+      "voucherNo": "转-003",
+      "voucherDate": "2024-11-05",
+      "description": "月末结转成本",
+      "preparedBy": "系统管理员",
+      "status": "已审核",
+      "entries": [
+        {
+          "id": "E003-1",
+          "summary": "结转主营业务成本",
+          "accountCode": "6401",
+          "debitAmount": 12000.00,
+          "creditAmount": null
+        },
+        {
+          "id": "E003-2",
+          "summary": "库存商品减少",
+          "accountCode": "1405",
+          "debitAmount": null,
+          "creditAmount": 12000.00
+        }
+      ]
+    },
+    {
+      "id": "V004",
+      "voucherNo": "转-004",
+      "voucherDate": "2024-11-05",
+      "description": "月末结转成本",
+      "preparedBy": "系统管理员",
+      "status": "待审核",
+      "entries": [
+        {
+          "id": "E003-1",
+          "summary": "结转主营业务成本",
+          "accountCode": "6401",
+          "debitAmount": 12000.00,
+          "creditAmount": null
+        },
+        {
+          "id": "E003-2",
+          "summary": "库存商品减少",
+          "accountCode": "1405",
+          "debitAmount": null,
+          "creditAmount": 12000.00
+        }
+      ]
+    }
+  ]
+  

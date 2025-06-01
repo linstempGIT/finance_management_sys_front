@@ -1,0 +1,18 @@
+[
+    { "id": 1, "name": "研发部", "description": "负责产品研发与技术创新", "employeeId": 101, "employeeName": "张元" },
+    { "id": 2, "name": "市场部", "description": "负责市场推广与品牌建设", "employeeId": 102, "employeeName": "李过" },
+    { "id": 3, "name": "销售部", "description": "负责产品销售与客户关系维护", "employeeId": 103, "employeeName": "杨子铭" },
+    { "id": 4, "name": "人事部", "description": "负责人力资源管理与招聘", "employeeId": 104, "employeeName": "林懿" },
+    { "id": 5, "name": "财务部", "description": "负责公司财务核算与资金管理", "employeeId": 105, "employeeName": "黄东" },
+    { "id": 6, "name": "行政部", "description": "负责日常行政事务与后勤保障", "employeeId": 101, "employeeName": "王克" },
+    { "id": 7, "name": "产品部", "description": "负责产品规划与需求分析", "employeeId": 102, "employeeName": "刘宇鹏" },
+    { "id": 8, "name": "运维部", "description": "负责系统运维与技术支持", "employeeId": 106, "employeeName": "陈娜" },
+    { "id": 9, "name": "设计部", "description": "负责产品UI/UX设计", "employeeId": null, "employeeName": null },
+    { "id": 10, "name": "测试部", "description": "负责产品质量测试与保障", "employeeId": 107, "employeeName": "洪伟同" },
+    { "id": 11, "name": "法务部", "description": "处理公司法律事务", "employeeId": 101, "employeeName": "张灏明"},
+    { "id": 12, "name": "国际业务部", "description": "拓展海外市场", "employeeId": 102, "employeeName": "李源"},
+    { "id": 13, "name": "后勤部", "description": "提供后勤支持", "employeeId": 103, "employeeName": "江帆" },
+    { "id": 14, "name": "培训部", "description": "员工技能培训", "employeeId": 104, "employeeName": "刘星宇" },
+    { "id": 15, "name": "客服部", "description": "客户问题解答与支持", "employeeId": 105, "employeeName": "赵为" }
+  ]
+  

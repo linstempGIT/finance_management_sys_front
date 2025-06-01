@@ -1,0 +1,21 @@
+[
+    {
+      "id": "ledger-2024-10",
+      "period": "2024-10",
+      "settledDate": "2024-11-01",
+      "settledBy": "admin",
+      "summary": "2024年10月的月度结算。",
+      "totalVouchers": 15,
+      "remarks": "所有账户已对账。"
+    },
+    {
+      "id": "ledger-2024-09",
+      "period": "2024-09",
+      "settledDate": "2024-10-01",
+      "settledBy": "刘亮",
+      "summary": "2024年9月的月度结算。",
+      "totalVouchers": 12,
+      "remarks": ""
+    }
+  ]
+  

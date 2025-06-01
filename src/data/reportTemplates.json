@@ -1,0 +1,51 @@
+[
+    {
+      "templateId": "TPL_001",
+      "templateName": "月度凭证汇总表",
+      "reportType": "月报",
+      "dataSourceId": "VOUCHERS_MONTHLY_SUMMARY",
+      "dataSourceName": "月度凭证数据",
+      "outputFormats": ["Excel", "PDF"],
+      "generationCycle": "每月",
+      "lastGeneratedTime": null,
+      "status": "启用",
+      "createdBy": "admin001",
+      "createdTime": "2024-01-10T10:00:00Z",
+      "updatedTime": "2024-01-10T10:00:00Z",
+      "description": "按月汇总所有已审核凭证的借贷方金额。",
+      "dataElements": ["voucherDate", "voucherNumber", "summary", "debitAmount", "creditAmount", "preparedBy", "status"]
+    },
+    {
+      "templateId": "TPL_002",
+      "templateName": "所有员工薪资表",
+      "reportType": "自定义",
+      "dataSourceId": "SALARY_ALL_EMPLOYEES",
+      "dataSourceName": "员工薪资数据",
+      "outputFormats": ["Excel", "CSV"],
+      "generationCycle": "手动",
+      "lastGeneratedTime": "2024-03-15T14:30:00Z",
+      "status": "启用",
+      "createdBy": "admin001",
+      "createdTime": "2024-02-01T11:00:00Z",
+      "updatedTime": "2024-02-05T11:00:00Z",
+      "description": "导出指定月份所有员工的薪资明细。",
+      "dataElements": ["employeeId", "employeeName", "departmentName", "baseSalary", "bonus", "deductions", "netSalary", "payMonth"]
+    },
+    {
+      "templateId": "TPL_003",
+      "templateName": "年度部门支出分析",
+      "reportType": "年报",
+      "dataSourceId": "DEPARTMENT_EXPENSE_YEARLY",
+      "dataSourceName": "财务支出按部门",
+      "outputFormats": ["PDF"],
+      "generationCycle": "每年",
+      "lastGeneratedTime": null,
+      "status": "停用",
+      "createdBy": "admin001",
+      "createdTime": "2024-01-20T09:00:00Z",
+      "updatedTime": "2024-01-20T09:00:00Z",
+      "description": "按年统计各部门的财务支出总额及构成。",
+      "dataElements": ["departmentName", "expenseCategory", "totalAmount", "year"]
+    }
+  ]
+  

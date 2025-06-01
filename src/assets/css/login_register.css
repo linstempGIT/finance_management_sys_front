@@ -1,0 +1,270 @@
+/* src/assets/css/login_register.css */
+
+/* Use common variables from global.css */
+
+.login-container,
+.register-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative; /* Needed for overlay and toggle button */
+  transition: background-color var(--dark-mode-transition-duration) ease;
+  /* Background image is set via inline style in component */
+}
+
+/* Dark Mode Overlay */
+.login-container::before,
+.register-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-overlay-dark, rgba(0, 0, 0, 0.55));
+  opacity: 0; /* Hidden by default */
+  transition: opacity var(--dark-mode-transition-duration) ease;
+  z-index: 0; /* Behind content */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.login-container.dark-mode::before,
+.register-container.dark-mode::before {
+  opacity: 1; /* Show overlay in dark mode */
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 1;
+}
+
+/* Shared Card Style */
+.login-card,
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 40px 35px 40px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background var(--dark-mode-transition-duration) ease, border-color var(--dark-mode-transition-duration) ease;
+}
+
+/* Dark mode adjustments for card */
+.login-container.dark-mode .login-card,
+.register-container.dark-mode .register-card {
+    background: rgba(40, 40, 40, 0.3); /* Darker glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+/* Logo / Title Section */
+.logo-title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.logo {
+  width: 130px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.system-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--text-color-primary-light, #333);
+  text-align: center;
+  transition: color var(--dark-mode-transition-duration) ease;
+}
+/* Dark mode title color */
+.login-container.dark-mode .system-title,
+.register-container.dark-mode .system-title {
+  color: var(--text-color-primary-dark, #E0E0E0);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styles */
+.login-card .el-form, /* More specific selectors */
+.register-card .el-form {
+   width: 100%;
+}
+.login-card .el-form-item,
+.register-card .el-form-item {
+  margin-bottom: 25px;
+}
+
+/* Input/Select styles */
+.login-container .el-input__inner,
+.register-container .el-input__inner,
+.login-container .el-select .el-input__inner, /* Specific for Login's select */
+.register-container .el-select .el-input__inner { /* If Register gets a select */
+  transition: background-color var(--dark-mode-transition-duration) ease,
+              color var(--dark-mode-transition-duration) ease,
+              border-color var(--dark-mode-transition-duration) ease;
+  color: var(--text-color-primary-light, #333);
+}
+.login-container .el-input__inner::placeholder,
+.register-container .el-input__inner::placeholder {
+    color: var(--text-color-placeholder-light, #999);
+     transition: color var(--dark-mode-transition-duration) ease;
+}
+
+/* Dark Mode Input/Select Styles */
+.login-container.dark-mode .el-input__inner,
+.register-container.dark-mode .el-input__inner,
+.login-container.dark-mode .el-select .el-input__inner,
+.register-container.dark-mode .el-select .el-input__inner {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color-primary-dark, #fff);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.login-container.dark-mode .el-input__icon,
+.register-container.dark-mode .el-input__icon,
+.login-container.dark-mode .el-select .el-input .el-select__caret {
+  color: var(--text-color-secondary-dark, #bbb);
+}
+.login-container.dark-mode .el-input__inner::placeholder,
+.register-container.dark-mode .el-input__inner::placeholder {
+    color: var(--text-color-placeholder-dark, #aaa);
+}
+
+/* Shared Auth Button Style */
+.login-button,
+.register-button {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: white;
+  border: none;
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+  border-radius: 4px;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.login-button:hover,
+.register-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(45, 135, 230, 0.3);
+}
+
+.login-button:active,
+.register-button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 2px 4px rgba(45, 135, 230, 0.2);
+}
+
+.login-button.is-loading,
+.register-button.is-loading {
+  background-image: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end)) !important;
+}
+.login-button.is-loading:hover,
+.register-button.is-loading:hover,
+.login-button.is-disabled:hover,
+.register-button.is-disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Element UI Button Overrides (scoped to containers) */
+.login-container .el-button.login-button,
+.register-container .el-button.register-button {
+     background-color: transparent; /* Override Element base */
+     color: white;
+}
+.login-container .el-button.login-button:focus,
+.login-container .el-button.login-button:hover,
+.register-container .el-button.register-button:focus,
+.register-container .el-button.register-button:hover {
+    background-color: transparent; /* Override Element hover */
+    color: white;
+}
+
+
+/* Extra Links */
+.extra-links {
+  display: flex;
+  justify-content: flex-end; /* Align right */
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-color-regular-light, #555);
+  margin-top: 10px;
+  width: 100%;
+  transition: color var(--dark-mode-transition-duration) ease;
+}
+/* Dark mode links */
+.login-container.dark-mode .extra-links,
+.register-container.dark-mode .extra-links {
+  color: var(--text-color-secondary-dark, #bbb);
+}
+
+.register-link, /* Link to Register on Login page */
+.login-link {   /* Link to Login on Register page */
+  color: var(--color-primary, #409EFF);
+  text-decoration: none;
+  transition: color var(--dark-mode-transition-duration) ease;
+}
+.register-link:hover,
+.login-link:hover {
+  color: #66b1ff; /* Lighter Element blue */
+  text-decoration: underline;
+}
+/* Dark mode register/login link */
+.login-container.dark-mode .register-link,
+.register-container.dark-mode .login-link {
+  color: #87CEFA; /* Light sky blue */
+}
+.login-container.dark-mode .register-link:hover,
+.register-container.dark-mode .login-link:hover {
+  color: #ADD8E6; /* Lighter blue */
+}
+
+/* Shake animation class */
+.login-card.animate__shakeX,
+.register-card.animate__shakeX {
+  --animate-duration: 0.7s;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-card,
+    .register-card { max-width: 380px; padding: 35px 30px 30px 30px; }
+    .logo { width: 110px; }
+    .system-title { font-size: 20px; }
+    /* Toggle button responsive styles are handled in global.css if needed, or can be added here too */
+}
+
+@media (max-width: 480px) {
+    .content-wrapper { padding: 10px; }
+    .login-card,
+    .register-card { max-width: 90%; padding: 30px 20px 25px 20px; }
+    .logo-title-section { margin-bottom: 25px; }
+    .logo { width: 100px; }
+    .system-title { font-size: 18px; }
+    .login-card .el-form-item,
+    .register-card .el-form-item { margin-bottom: 20px; }
+}

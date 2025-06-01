@@ -1,0 +1,79 @@
+[
+    {
+      "reimbursementId": "REIM-2024-001",
+      "applicantId": 1,
+      "applicantName": "程师傅",
+      "projectId": "PROJ-SFT-001",
+      "totalAmount": 350.50,
+      "expenseItems": [
+        { "itemId": "item-1-1", "expenseDate": "2024-10-20", "category": "交通费", "description": "客户拜访出租车费", "amount": 120.50, "invoiceNumber": "INV001" },
+        { "itemId": "item-1-2", "expenseDate": "2024-10-21", "category": "餐饮费", "description": "招待客户午餐", "amount": 230.00, "invoiceNumber": "INV002" }
+      ],
+      "attachments": ["taxi_receipt.jpg", "lunch_invoice.pdf"],
+      "submissionDate": "2024-10-22",
+      "paymentDate": "2024-10-28",
+      "status": "已支付",
+      "remarks": "10月客户拜访费用"
+    },
+    {
+      "reimbursementId": "REIM-2024-002",
+      "applicantId": "user002",
+      "applicantName": "李四",
+      "projectId": "PROJ-MKT-010",
+      "totalAmount": 88.00,
+      "expenseItems": [
+        { "itemId": "item-2-1", "expenseDate": "2024-11-05", "category": "办公用品", "description": "购买打印纸和笔", "amount": 88.00, "invoiceNumber": "INV003" }
+      ],
+      "attachments": ["stationery_receipt.png"],
+      "submissionDate": "2024-11-06",
+      "paymentDate": null,
+      "status": "审批中",
+      "remarks": "11月办公用品采购"
+    },
+    {
+      "reimbursementId": "REIM-2024-001",
+      "applicantId": 1,
+      "applicantName": "程师傅",
+      "projectId": "",
+      "totalAmount": 0,
+      "expenseItems": [],
+      "attachments": [],
+      "submissionDate": null,
+      "paymentDate": null,
+      "status": "草稿",
+      "remarks": "出差预备"
+    },
+    {
+      "reimbursementId": "REIM-2024-002",
+      "applicantId": 1,
+      "applicantName": "程师傅",
+      "projectId": "PROJ-DEV-003",
+      "totalAmount": 1500.00,
+      "expenseItems": [
+        { "itemId": "item-4-1", "expenseDate": "2024-01-10", "category": "差旅费", "description": "参加技术研讨会机票", "amount": 1200.00, "invoiceNumber": "INV004"},
+        { "itemId": "item-4-2", "expenseDate": "2024-01-11", "category": "住宿费", "description": "研讨会酒店住宿", "amount": 300.00, "invoiceNumber": "INV005"}
+      ],
+      "attachments": ["flight_ticket.pdf", "hotel_receipt.jpg"],
+      "submissionDate": "2024-01-15",
+      "paymentDate": null,
+      "status": "被驳回",
+      "remarks": "请补充会议邀请函",
+      "rejectionReason": "缺少会议邀请函作为证明材料。"
+    },
+    {
+      "reimbursementId": "REIM-2024-003",
+      "applicantId": "user003",
+      "applicantName": "王五",
+      "projectId": "PROJ-RD-007",
+      "totalAmount": 45.00,
+      "expenseItems": [
+        { "itemId": "item-5-1", "expenseDate": "2024-02-01", "category": "交通费", "description": "市内交通补贴", "amount": 45.00, "invoiceNumber": ""}
+      ],
+      "attachments": [],
+      "submissionDate": "2024-02-02",
+      "paymentDate": null,
+      "status": "已提交",
+      "remarks": "2月交通补贴"
+    }
+  ]
+  

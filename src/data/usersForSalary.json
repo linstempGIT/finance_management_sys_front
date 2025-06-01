@@ -1,0 +1,22 @@
+[
+  {
+    "id": 2,
+    "name": "Regular User",
+    "departmentName": "销售部"
+  },
+  {
+    "id": 3,
+    "name": "Finance Team",
+    "departmentName": "财务部"
+  },
+  {
+    "id": 4,
+    "name": "Test Account",
+    "departmentName": "运维部"
+  },
+  {
+    "id": 10,
+    "name": "财务员工王五",
+    "departmentName": "财务部"
+  }
+]

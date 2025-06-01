@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "employeeId": 2,
+    "employeeName": "Regular User",
+    "departmentName": "销售部",
+    "year": "2024-10",
+    "time": "2024-10-25 10:00:00",
+    "price": 7500.00,
+    "note": "October base salary"
+  },
+  {
+    "id": 2,
+    "employeeId": 3,
+    "employeeName": "Finance Team",
+    "departmentName": "财务部",
+    "year": "2024-10",
+    "time": "2024-10-25 10:05:00",
+    "price": 9500.00,
+    "note": "October salary + bonus"
+  },
+  {
+    "id": 3,
+    "employeeId": 4,
+    "employeeName": "Test Account",
+    "departmentName": "运维部",
+    "year": "2024-10",
+    "time": "2024-10-25 10:10:00",
+    "price": 6000.00,
+    "note": "October salary"
+  },
+  {
+    "id": 4,
+    "employeeId": 10,
+    "employeeName": "财务员工王五",
+    "departmentName": "财务部",
+    "year": "2024-10",
+    "time": "2024-10-25 10:15:00",
+    "price": 8200.00,
+    "note": "October salary"
+  },
+  {
+    "id": 5,
+    "employeeId": 2,
+    "employeeName": "Regular User",
+    "departmentName": "销售部",
+    "year": "2024-11",
+    "time": "2024-11-25 10:00:00",
+    "price": 7600.00,
+    "note": "November base salary + small bonus"
+  },
+  {
+    "id": 6,
+    "employeeId": 3,
+    "employeeName": "Finance Team",
+    "departmentName": "财务部",
+    "year": "2024-11",
+    "time": "2024-11-25 10:05:00",
+    "price": 9650.00,
+    "note": "November salary"
+  }
+]

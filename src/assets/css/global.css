@@ -1,0 +1,182 @@
+/* src/assets/css/global.css */
+
+:root {
+    /* Consistent Transition Duration */
+    --dark-mode-transition-duration: 0.6s;
+
+    /* Animation Duration (if used globally, like animate.css defaults) */
+    --animate-duration: 800ms;
+
+    /* Common Colors - Light Mode */
+    --color-primary: #409EFF;
+    --color-success: #67C23A;
+    --color-warning: #E6A23C;
+    --color-danger: #F56C6C;
+    --color-info: #909399;
+
+    --text-color-primary-light: #303133;
+    --text-color-regular-light: #606266;
+    --text-color-secondary-light: #909399;
+    --text-color-placeholder-light: #C0C4CC;
+
+    --border-color-base-light: #DCDFE6;
+    --border-color-light: #E4E7ED;
+    --border-color-lighter: #EBEEF5;
+    --border-color-extra-light: #F2F6FC;
+
+    --background-color-base-light: #F5F7FA;
+
+    /* Common Colors - Dark Mode */
+    --text-color-primary-dark: #e5eaf3;
+    --text-color-regular-dark: #cfd3dc;
+    --text-color-secondary-dark: #a3a6ad;
+    --text-color-placeholder-dark: #8d9095;
+
+    --border-color-base-dark: #4C4D4F;
+    --border-color-light-dark: #414243;
+    --border-color-lighter-dark: #363637;
+    --border-color-extra-light-dark: #2b2b2c;
+
+    --background-color-base-dark: #141414; /* Very dark bg */
+    --background-overlay-dark: rgba(0, 0, 0, 0.6); /* Overlay for backgrounds */
+
+    /* Example Component Backgrounds */
+    --component-bg-light: #FFFFFF;
+    --component-bg-dark: #1d1d1d; /* Dark component bg */
+
+    /* Button gradient colors (if shared) */
+    --gradient-start: #10B981;
+    --gradient-end: #3B82F6;
+
+    /* Manager Specific (Can be here or in manager.css, maybe here for global access) */
+    --manager-header-height: 60px;
+    --manager-sidebar-width: 200px;
+}
+
+/* Optional: Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+                 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent body scrollbars by default */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+/* ----- Shared Dark Mode Toggle Button Styles ----- */
+/* ----- Shared Dark Mode Toggle Button Styles ----- */
+.dark-mode-toggle {
+  /* CHANGE: Position relative to viewport */
+  position: fixed;
+  /* CHANGE: Position at bottom-right */
+  bottom: 30px; /* Adjust vertical position from bottom */
+  right: 30px;  /* Adjust horizontal position from right */
+  /* REMOVE: top: 25px; (Or whatever top value was) */
+  /* INCREASE Z-INDEX: Ensure it's above most things */
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 45px; /* Slightly larger feels better in corner, optional */
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* Add box-shadow to transition */
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: var(--text-color-primary-light, #333);
+  font-size: 22px; /* Adjust icon size if needed */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Enhance shadow */
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2); /* Enhance hover shadow */
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Dark Mode Toggle Button - Dark State */
+/* No change needed here, just relies on parent .dark-mode */
+.dark-mode .dark-mode-toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f1c40f; /* Sun icon color */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Dark mode shadow */
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+   box-shadow: 0 6px 16px rgba(0,0,0,0.4); /* Dark mode hover shadow */
+}
+/* ----- End Shared Dark Mode Toggle Button Styles ----- */
+
+
+/* Optional: Adjust position for smaller screens if needed */
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+      bottom: 20px; /* Closer to edge on smaller screens */
+      right: 20px;
+      width: 40px;  /* Slightly smaller */
+      height: 40px;
+      font-size: 20px;
+  }
+}
+/* ----- End Shared Dark Mode Toggle Button Styles ----- */
+
+
+/* Styling for Element UI detached components (Dropdown, Message, etc.) in Dark Mode */
+/* Requires adding a class to <body> when dark mode is active */
+/* Example: document.body.classList.toggle('dark-theme-global', isDarkMode); */
+
+body.dark-theme-global .el-dropdown-menu.el-popper {
+  background-color: var(--component-bg-dark, #3a3a3a);
+  border: 1px solid var(--border-color-lighter-dark, #555);
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.3);
+}
+body.dark-theme-global .el-dropdown-menu__item {
+  color: var(--text-color-regular-dark, #ccc);
+}
+body.dark-theme-global .el-dropdown-menu__item:hover {
+  background-color: rgba(255, 255, 255, 0.08); /* Subtle hover */
+  color: var(--text-color-primary-dark, #fff);
+}
+body.dark-theme-global .el-popper[x-placement^=bottom] .popper__arrow::after {
+   border-bottom-color: var(--component-bg-dark, #3a3a3a) !important;
+}
+body.dark-theme-global .el-popper[x-placement^=top] .popper__arrow::after {
+   border-top-color: var(--component-bg-dark, #3a3a3a) !important;
+}
+
+body.dark-theme-global .el-select-dropdown.el-popper {
+  background-color: var(--component-bg-dark, #3a3a3a);
+  border: 1px solid var(--border-color-lighter-dark, #555);
+}
+body.dark-theme-global .el-select-dropdown__item {
+   color: var(--text-color-regular-dark, #ccc);
+}
+body.dark-theme-global .el-select-dropdown__item.hover,
+body.dark-theme-global .el-select-dropdown__item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+body.dark-theme-global .el-select-dropdown__item.selected {
+  color: var(--color-primary, #409EFF); /* Or a lighter blue */
+  font-weight: bold;
+}
+
+/* Add similar overrides for el-message, el-tooltip etc. if needed */
+

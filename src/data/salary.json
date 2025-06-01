@@ -1,0 +1,63 @@
+[
+    {
+      "id": "SAL001",
+      "employeeId": "EMP001",
+      "employeeName": "张三",
+      "departmentName": "技术部",
+      "payMonth": "2024-02",
+      "baseSalary": 8000,
+      "performanceBonus": 1200,
+      "allowances": 300,
+      "deductions": 500,
+      "tax": 250,
+      "netSalary": 8750,
+      "status": "已发放",
+      "issueDate": "2024-03-05"
+    },
+    {
+      "id": "SAL002",
+      "employeeId": "EMP002",
+      "employeeName": "李四",
+      "departmentName": "市场部",
+      "payMonth": "2024-02",
+      "baseSalary": 9000,
+      "performanceBonus": 800,
+      "allowances": 200,
+      "deductions": 400,
+      "tax": 350,
+      "netSalary": 9250,
+      "status": "已发放",
+      "issueDate": "2024-03-05"
+    },
+    {
+      "id": "SAL003",
+      "employeeId": "EMP003",
+      "employeeName": "王五",
+      "departmentName": "技术部",
+      "payMonth": "2024-03",
+      "baseSalary": 8200,
+      "performanceBonus": 1000,
+      "allowances": 300,
+      "deductions": 510,
+      "tax": 260,
+      "netSalary": 8730,
+      "status": "待发放",
+      "issueDate": null
+    },
+    {
+      "id": "SAL004",
+      "employeeId": "EMP001",
+      "employeeName": "张三",
+      "departmentName": "技术部",
+      "payMonth": "2024-03",
+      "baseSalary": 8000,
+      "performanceBonus": 1500,
+      "allowances": 300,
+      "deductions": 500,
+      "tax": 280,
+      "netSalary": 8020,
+      "status": "待发放",
+      "issueDate": null
+    }
+  ]
+  

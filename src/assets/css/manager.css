@@ -1,0 +1,316 @@
+/* src/assets/css/manager.css */
+
+/* Use common variables from global.css */
+
+.manager-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars on the container itself */
+    background-color: var(--background-color-base-light, #f8f9fa);
+    color: var(--text-color-primary-light, #333);
+    transition: background-color var(--dark-mode-transition-duration) ease,
+        color var(--dark-mode-transition-duration) ease;
+}
+
+/* Dark Mode Container */
+.manager-container.dark-mode {
+    background-color: var(--background-color-base-dark, #1e1e1e);
+    color: var(--text-color-primary-dark, #e0e0e0);
+}
+
+/* Header */
+.manager-header {
+    height: var(--manager-header-height);
+    background-color: var(--component-bg-light, #ffffff);
+    border-bottom: 1px solid var(--border-color-light, #e5e5e5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color var(--dark-mode-transition-duration) ease,
+        border-color var(--dark-mode-transition-duration) ease;
+    position: relative; /* Keep for positioning context if needed */
+    z-index: 10; /* Ensure header stays above sidebar scroll */
+    flex-shrink: 0; /* Prevent header shrinking */
+}
+
+.manager-container.dark-mode .manager-header {
+    background-color: var(--component-bg-dark, #2c2c2c);
+    border-bottom-color: var(--border-color-light-dark, #444);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.manager-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.manager-header-left .header-logo { /* Target the specific class */
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle; /* Already in component style, but good here too */
+}
+
+.manager-header-left .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color-primary-light, #333);
+    transition: color var(--dark-mode-transition-duration) ease;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.manager-container.dark-mode .manager-header-left .title {
+    color: var(--text-color-primary-dark, #e0e0e0);
+}
+
+.manager-header-center {
+    flex-grow: 1;
+    margin: 0 30px; /* Adjusted spacing */
+    min-width: 0; /* Allow shrinking */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Breadcrumb Styles */
+.manager-container .el-breadcrumb__inner,
+.manager-container .el-breadcrumb__separator {
+    color: var(--text-color-secondary-light, #666);
+    transition: color var(--dark-mode-transition-duration) ease;
+}
+.manager-container .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+    color: var(--text-color-regular-light, #606266);
+}
+.manager-container.dark-mode .el-breadcrumb__inner,
+.manager-container.dark-mode .el-breadcrumb__separator {
+    color: var(--text-color-secondary-dark, #aaa);
+}
+.manager-container.dark-mode .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+    color: var(--text-color-regular-dark, #cfd3dc);
+}
+
+
+.manager-header-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Spacing for the toggle button is now handled by its own margin (in global.css) */
+/* We just need the avatar container styles */
+.manager-header-right .avatar {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 15px; /* Add space AFTER the toggle button */
+}
+
+.manager-header-right .avatar img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+    background-color: var(--border-color-lighter, #eee); /* Placeholder light bg */
+    border: 1px solid var(--border-color-light, #e5e5e5); /* Subtle border */
+}
+.manager-container.dark-mode .manager-header-right .avatar img {
+    background-color: var(--border-color-lighter-dark, #444); /* Placeholder dark bg */
+     border: 1px solid var(--border-color-light-dark, #555);
+}
+
+
+.manager-header-right .avatar div { /* User name */
+    font-size: 15px;
+    color: var(--text-color-regular-light, #606266);
+    transition: color var(--dark-mode-transition-duration) ease;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.manager-container.dark-mode .manager-header-right .avatar div {
+    color: var(--text-color-regular-dark, #cfd3dc);
+}
+
+/* Main Area */
+.manager-main {
+    flex-grow: 1; /* Take remaining vertical space */
+    display: flex;
+    overflow: hidden; /* Crucial: Prevent double scrollbars */
+    height: calc(100vh - var(--manager-header-height)); /* Calculate height */
+}
+
+/* Sidebar */
+.manager-main-left {
+    width: var(--manager-sidebar-width);
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    background-color: var(--component-bg-light, #ffffff);
+    border-right: 1px solid var(--border-color-light, #e5e5e5);
+    transition: background-color var(--dark-mode-transition-duration) ease,
+        border-color var(--dark-mode-transition-duration) ease;
+    overflow-y: auto; /* Allow sidebar scrolling if content exceeds height */
+    height: 100%; /* Fill the height of .manager-main */
+}
+
+.manager-container.dark-mode .manager-main-left {
+    background-color: var(--component-bg-dark, #252526);
+    border-right-color: var(--border-color-light-dark, #444);
+}
+
+/* Element UI Menu Styling */
+.manager-main-left .el-menu {
+    background-color: transparent !important;
+    border-right: none !important;
+}
+.manager-main-left .el-submenu .el-menu {
+    background-color: var(--background-color-base-light, #f8f9fa) !important; /* Slightly different nested bg */
+}
+.manager-container.dark-mode .manager-main-left .el-submenu .el-menu {
+    background-color: var(--background-color-base-dark, #1e1e1e) !important;
+}
+
+
+/* Menu Item Base */
+.manager-main-left .el-menu-item,
+.manager-main-left .el-submenu__title {
+    height: 50px;
+    line-height: 50px;
+    color: var(--text-color-regular-light, #606266) !important;
+    transition: background-color 0.3s ease, color var(--dark-mode-transition-duration) ease;
+}
+.manager-main-left .el-menu-item i,
+.manager-main-left .el-submenu__title i {
+    color: var(--text-color-secondary-light, #909399) !important;
+    transition: color var(--dark-mode-transition-duration) ease;
+    margin-right: 8px;
+}
+
+/* Dark Mode Menu Item Base */
+.manager-container.dark-mode .manager-main-left .el-menu-item,
+.manager-container.dark-mode .manager-main-left .el-submenu__title {
+    color: var(--text-color-regular-dark, #cfd3dc) !important;
+}
+.manager-container.dark-mode .manager-main-left .el-menu-item i,
+.manager-container.dark-mode .manager-main-left .el-submenu__title i {
+    color: var(--text-color-secondary-dark, #a3a6ad) !important;
+}
+
+/* Menu Item Hover */
+.manager-main-left .el-menu-item:hover,
+.manager-main-left .el-submenu__title:hover {
+    background-color: var(--border-color-extra-light, #eef3fc) !important;
+    color: var(--color-primary, #409EFF) !important;
+}
+.manager-main-left .el-menu-item:hover i,
+.manager-main-left .el-submenu__title:hover i {
+    color: var(--color-primary, #409EFF) !important;
+}
+
+/* Dark Mode Menu Item Hover */
+.manager-container.dark-mode .manager-main-left .el-menu-item:hover,
+.manager-container.dark-mode .manager-main-left .el-submenu__title:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #66b1ff !important; /* Lighter blue for dark hover */
+}
+.manager-container.dark-mode .manager-main-left .el-menu-item:hover i,
+.manager-container.dark-mode .manager-main-left .el-submenu__title:hover i {
+    color: #66b1ff !important;
+}
+
+/* Menu Item Active */
+.manager-main-left .el-menu-item.is-active {
+    background-color: #e6f0ff !important;
+    color: var(--color-primary, #409EFF) !important;
+    border-right: 3px solid var(--color-primary, #409EFF);
+}
+.manager-main-left .el-menu-item.is-active i {
+    color: var(--color-primary, #409EFF) !important;
+}
+
+/* Dark Mode Menu Item Active */
+.manager-container.dark-mode .manager-main-left .el-menu-item.is-active {
+    background-color: rgba(64, 158, 255, 0.15) !important;
+    color: #87CEFA !important; /* Light sky blue active text */
+    border-right: 3px solid #87CEFA;
+}
+.manager-container.dark-mode .manager-main-left .el-menu-item.is-active i {
+    color: #87CEFA !important;
+}
+
+/* Submenu nested items */
+.manager-main-left .el-menu .el-menu-item { /* Style nested items inside any menu */
+    height: 45px;
+    line-height: 45px;
+    padding-left: 48px !important; /* Indent nested items more */
+}
+.manager-main-left .el-menu .el-menu-item.is-active {
+     background-color: #d9ecff !important; /* Slightly different active for nested */
+     border-right: none; /* Remove border for nested active */
+}
+.manager-container.dark-mode .manager-main-left .el-menu .el-menu-item.is-active {
+     background-color: rgba(135, 206, 250, 0.2) !important; /* Slightly different dark active for nested */
+}
+
+
+/* Main Content Area (Right) */
+.manager-main-right {
+    flex-grow: 1; /* Take remaining horizontal space */
+    overflow-y: auto; /* Allow content area scrolling */
+    height: 100%; /* Fill the height of .manager-main */
+    padding: 20px; /* Add padding to content */
+    background-color: var(--background-color-base-light, #f8f9fa);
+    transition: background-color var(--dark-mode-transition-duration) ease;
+}
+
+.manager-container.dark-mode .manager-main-right {
+    background-color: var(--background-color-base-dark, #1e1e1e);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Update variable locally if needed, or handle via JS */
+    /* --manager-sidebar-width: 64px; */
+
+    .manager-main-left {
+        width: 64px; /* Directly set collapsed width */
+        /* Add styles for collapsed icons/text hiding if implementing */
+    }
+    .manager-main-left .el-menu-item span,
+    .manager-main-left .el-submenu__title span {
+        display: none; /* Hide text */
+    }
+     .manager-main-left .el-menu-item,
+     .manager-main-left .el-submenu__title {
+         padding-left: 20px !important; /* Adjust padding for centered icon */
+         text-align: center;
+     }
+     .manager-main-left .el-submenu__title .el-submenu__icon-arrow {
+         display: none; /* Hide submenu arrows */
+     }
+      .manager-main-left .el-menu .el-menu-item {
+         padding-left: 20px !important; /* Reset padding for nested */
+         text-align: center;
+      }
+      .manager-main-left .el-menu .el-menu-item span {
+          display: none; /* Hide nested text */
+      }
+
+
+    .manager-header-center {
+        display: none; /* Hide breadcrumbs on small screens */
+    }
+    .manager-header-left .title {
+        display: none; /* Hide title on small screens */
+    }
+    .manager-header-right .avatar div { /* User name */
+        display: none; /* Hide name */
+    }
+     .manager-header-right .avatar {
+         margin-left: 10px; /* Adjust space next to toggle */
+     }
+     /* Toggle button responsive size might be in global.css or here */
+     .dark-mode-toggle { /* Override global if needed */
+        top: 12px; right: 15px; width: 36px; height: 36px; font-size: 18px;
+     }
+}

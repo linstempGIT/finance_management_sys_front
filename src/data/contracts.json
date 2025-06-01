@@ -1,0 +1,68 @@
+[
+    {
+      "contractId": "CON-2024-001",
+      "creatorId": "user001",
+      "contractName": "年度软件维护服务合同",
+      "projectId": "PROJ-SFT-001",
+      "signingParty": "甲方科技公司",
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "contractAmount": 120000.00,
+      "attachments": ["维护协议v1.pdf", "报价单.xlsx"],
+      "status": "已审批",
+      "paymentProgress": "部分支付"
+    },
+    {
+      "contractId": "CON-2024-002",
+      "creatorId": "user002",
+      "contractName": "新办公楼装修合同",
+      "projectId": "PROJ-BLD-005",
+      "signingParty": "乙方建筑集团",
+      "startDate": "2024-03-15",
+      "endDate": "2024-09-30",
+      "contractAmount": 2500000.00,
+      "attachments": ["装修合同正本.pdf", "设计图纸.zip"],
+      "status": "已审批",
+      "paymentProgress": "已完成"
+    },
+    {
+      "contractId": "CON-2024-001",
+      "creatorId": "user001",
+      "contractName": "市场推广活动策划",
+      "projectId": "PROJ-MKT-010",
+      "signingParty": "丙方广告公司",
+      "startDate": "2024-02-01",
+      "endDate": "2024-05-31",
+      "contractAmount": 75000.00,
+      "attachments": [],
+      "status": "草稿",
+      "paymentProgress": "待付"
+    },
+    {
+      "contractId": "CON-2024-002",
+      "creatorId": "user003",
+      "contractName": "法律咨询服务框架协议",
+      "projectId": "",
+      "signingParty": "丁律师事务所",
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "contractAmount": 50000.00,
+      "attachments": ["框架协议草案.docx"],
+      "status": "已提交",
+      "paymentProgress": "待付"
+    },
+    {
+      "contractId": "CON-2024-003-Terminated",
+      "creatorId": "user001",
+      "contractName": "旧设备采购合同",
+      "projectId": "PROJ-EQP-002",
+      "signingParty": "戊方供应商",
+      "startDate": "2024-06-01",
+      "endDate": "2024-07-30",
+      "contractAmount": 30000.00,
+      "attachments": [],
+      "status": "终止",
+      "paymentProgress": "待付"
+    }
+  ]
+  

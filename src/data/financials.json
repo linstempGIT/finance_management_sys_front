@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "办公用品采购",
+    "price": 150.75,
+    "time": "2024-10-15 10:30:00",
+    "departmentId": 1,
+    "departmentName": "行政部"
+  },
+  {
+    "id": 2,
+    "name": "差旅费报销 - 项目A",
+    "price": 875.00,
+    "time": "2024-10-20 14:00:00",
+    "departmentId": 2,
+    "departmentName": "研发部"
+  },
+  {
+    "id": 3,
+    "name": "团建活动支出",
+    "price": 2500.00,
+    "time": "2024-10-28 18:00:00",
+    "departmentId": 1,
+    "departmentName": "行政部"
+  },
+  {
+    "id": 4,
+    "name": "服务器租赁费用 - 11月",
+    "price": 1200.00,
+    "time": "2024-11-01 09:00:00",
+    "departmentId": 3,
+    "departmentName": "IT部"
+  },
+  {
+    "id": 5,
+    "name": "市场推广物料制作",
+    "price": 650.50,
+    "time": "2024-11-05 16:45:00",
+    "departmentId": 4,
+    "departmentName": "市场部"
+  }
+]
